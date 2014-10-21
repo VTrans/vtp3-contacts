@@ -14,3 +14,4 @@ Contact_Dist comes from refDistrictTable.
 6. Romoved background and outline symbology to all layers in order to be invisable in AGO map.
 7. Set Pop-up title to display layer name and major boundary for that layer.
 8. Configured all pop-ups to only display contact information.
+9. [Here it is so far, just click around](http://bit.ly/1ygBcDQ)
