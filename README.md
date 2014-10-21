@@ -2,3 +2,10 @@ vtp3-contacts
 =============
 
 "who do I call?"
+
+###Contact Map Development
+
+1. Created View of District and Construction Contacts, Contact_Const comes from warehouse  and is refEmployeeInfo joined to refConstructionRegions, 
+Contact_Dist comes from refDistrictTable.
+2. Imported Views into GDB_ASSETS to be joined with GDB_Assets.ASSETS_ADMIN.Boundary_Construction_Regions, GDB_Gen.VTRANS_ADMIN.Boundary_OPSDistrictTowns and GDB_Gen.VTRANS_ADMIN.MATS_District_Mileages.
+3. Export joined features from GDB-GEN to GDB_Assets in order to edit.
