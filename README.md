@@ -14,8 +14,6 @@ Contact_Dist comes from refDistrictTable.
 6. Romoved background and outline symbology to all layers in order to be invisable in AGO map.
 7. Set Pop-up title to display layer name and major boundary for that layer.
 8. Configured all pop-ups to only display contact information.
-<<<<<<< HEAD
 9. manually entered email adresses for GDB_Assets.ASSETS_ADMIN.MATS_Dist_Mile_Contacts and GDB_Assets.ASSETS_ADMIN.Boundary_OPSDistrictTowns_Contacts layers.
-=======
-9. [Here it is so far, just click around](http://bit.ly/1ygBcDQ)
->>>>>>> de51cb8214a462ff9fb8d32b99383368ae6c2f37
+10. [Here it is so far, just click around](http://bit.ly/1uEPP01)
+11. Re-published ContactMap Link above with minor changes to Pop-up Titles and display.
