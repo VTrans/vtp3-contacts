@@ -18,3 +18,5 @@ Contact_Dist comes from refDistrictTable.
 10. Re-published ContactMap Link above with minor changes to Pop-up Titles and display.
 11. Develop Web Application Complete
 12. [Here it is so far, just click around](http://vtrans.maps.arcgis.com/apps/webappviewer/index.html?id=22c56fb498d147319f17860c5ed00796)
+13. Added States/Provinces Boundary backgorund layer for popping VT look.
+14. Set filter on States/Provinces Boundary to ("postal" is not "VT") and Fill Transperency to 70%.
