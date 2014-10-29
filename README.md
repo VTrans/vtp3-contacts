@@ -23,3 +23,16 @@ Contact_Dist comes from refDistrictTable.
 12. [Here it is so far, just click around](http://vtrans.maps.arcgis.com/apps/webappviewer/index.html?id=22c56fb498d147319f17860c5ed00796)
 13. Added States/Provinces Boundary backgorund layer for popping VT look.
 14. Set filter on States/Provinces Boundary to ("postal" is not "VT") and Fill Transperency to 70%.
+
+###Geoprocessing Results
+1. Researched multiple ArcMap geoprocessing tools in efforts of combining GDB_Assets.ASSETS_ADMIN.Boundary_OPSDistrictTowns_Contacts, GDB_Assets.ASSETS_ADMIN.Boundary_ConstReg_Contacts and GDB_Assets.ASSETS_ADMIN.MATS_Dist_Mile_Contacts into one "Contacts" Layer.
+2. Tools and methods explored were as follows:
+	- (Successful) Tool Used (Union), Input features were Boundary_OPSDistrictTowns_Contacts (polygon) and Boundary_ConstReg_Contacts (polygon). Allowes both existing polygon data to be combined into one feature (all attributes were kept). 
+	- (Successful) Tool Used (Buffer), Input feature was MATS_Dist_Mile_Contacts (line) and one meter offset was assigned. Select buffer segments created and export out as own featureclass.
+	- (Successful) Tool Used (Advanced Editing Tool, Construct Polygon), Began editing on MATS_Dist_Mile_Cont_Poly (line) and used Boundary_OPSDistrictTowns_Contacts (polygon) as template to create polygon of MATS_Dist_Mile_Cont_Poly then export to featureclass.
+	- (Failure) Tool Used (Merge), Input Datasets were Boundary_OPSDistrictTowns_Contacts, Boundary_ConstReg_Contacts and MATS_Dist_Mile_Cont_Polygon. Merged fine but results were unsatisfactory. Creates Individual features between any enclosed route segment. 
+	- (Failure) Tool Used (Union), Same results as above.
+	- (Failure) Tool Used (Spatial Join), Same results as above.   
+	- (Successful) Only logical outcome for creating a "polyline" from Route Feature was to export the results from the Spatial Join and save the MATS_Dist_Mile_Cont_Polygon as its own feature with all contact info associated with each segment. This resulted in a rather odd segmentation of the feature but overall was succesful.
+
+3. I believe there are too many variables within the data in order to perform a proper spatial merge without heavily modifying the attribute table to account for the number of boundary intersect conflicts. i.e  "MATS_Dist_Mile_Contacts" Route Features are asigned to individual districts but crosses Regional and District Boundaries.
